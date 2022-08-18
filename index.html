@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Property</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            color: red;
+            margin-bottom: 10px;
+            background-color: rgb(10, 10, 10);
+        }
+
+        .main .para {
+            border: 1px solid red;
+            color: currentColor;
+        }
+
+
+
+        .para1 {
+
+            border: 1px solid currentColor;
+            color: currentColor;
+        }
+
+        .hwb-color {
+            border: 2px solid red;
+            background-color: hwb(12 50% 0% / .5);
+            background-color: hwb(50deg 30% 40% / .5);
+            margin-bottom: 10px;
+        }
+
+        .lch-color-format {
+            border: 2px solid green;
+            background-color: #aaa;
+
+            margin-bottom: 10px;
+
+        }
+
+        .clamp-function {
+            border: 2px solid red;
+            background-color: #555;
+            font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+            color: rgb(215, 224, 215);
+            width: clamp(150px, 60%, 600px);
+            margin-bottom: 10px;
+        }
+
+        .margin-padding {
+            border: 2px solid brown;
+            margin: 2px 3px 5px 6px;
+            padding: 19px 41px 19px 41px;
+            background-color: beige;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <p class="para">My name is subash Pariyar</p>
+        <p class="para1">CurentColor is those whose follow the parent rules <br> syntax of hwb is hwb (194 0% 0% / .5)
+            194 is hue, second element is whiteness , third is blackness and last one is transparansy</p>
+
+
+
+    </div>
+
+
+    <div class="hwb-color">
+        <h4>HWB in css color:</h4>
+        <p>The hwb() fuctional notion expresses a given color according to its hue, whitness and blackness. An optonal
+            alpha component represent the color's transparency. The hue measured in degree, just number, turn .</p>
+    </div>
+
+
+    <div class="lch-color-format">
+        <h4>LCH color format:</h4>
+        <p>The LCH funtional notion expresses a given color in the LCH color space. <br>
+            Syntax: <br> lch(L C H / A ) <br>
+            l: specifies the CIE lightness, and is a percentage between 0% representing black and 100% representing
+            white. <br>
+            c: species the amount of color and its minimum useful value is 0 and maximum value is theoretically
+            unbounded(but in practice does not exceed 230) <br> H: is the hue angle <br> A: species (alpha) can be a
+            number between 0 to 1, or a oercentage from 0% to 100% </p>
+    </div>
+
+    <div class="clamp-function">
+        <p>The clamp() function clamps a value between an upper and lower bound. clamp() enamles selecting a middle
+            value within a range of values between a defined minimun and maximun. It takes three paramaters: a minimum
+            value, a prefered value and a maximun allowed value. The clamp () function can be used anywhere a
+            &lt;length&gt;, &lt;frequency&gt; &lt;angle&gt;, &lt;time&gt;, &lt;percentae&gt;, &lt;number&gt;,
+            &lt;integer&gt; is allowed. <br>
+            The syntax of clamp is: <br> font-size: clamp(1rem 4rem 8rem); </p>
+    </div>
+
+    <div class="margin-padding">
+        <p>The CSS margin properties are used to create space around elements, outside of any defined borders. <br> With
+            CSS, you have full control over the margins. There are properties for setting the margin for each side of an
+            element (top, right, bottom, and left) . <br> The shorthand property of margin is: margin : 1px 2px 3px
+            4px; means (Top right bottom left);</p> <br>
+        <p>Padding is used to create space around an element's content, inside of any defined borders. With CSS, you
+            have full control over the padding. There are properties for setting the padding for each side of an element
+            (top, right, bottom, and left). <br> The shorthand property of padding is padding: 4px 5px 6px 7px means top
+            right bottom left </p>
+    </div>
+
+
+</body>
+
+</html>
